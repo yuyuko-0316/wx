@@ -23,10 +23,7 @@ def count():
     # 获取请求体参数
     params = request.get_json()
 
-    print(params)
-    
-    if not params:
-       return make_err_response('No JSON data provided')
+    print("data: " + str(params))
 
     try:
         # 将数据转发到另一个服务器
