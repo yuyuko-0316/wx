@@ -54,7 +54,7 @@ def count():
 
     # action参数错误
     else:
-        return make_err_response('action参数错误')
+        return make_err_response('action参数错误' + params)
 
 
 @app.route('/api/count', methods=['GET'])
