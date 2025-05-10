@@ -23,7 +23,7 @@ def count():
     # 获取请求体参数
     params = request.get_json()
 
-    print("data: " + str(params))
+    print("params data: " + str(params))
 
     try:
         # 将数据转发到另一个服务器
