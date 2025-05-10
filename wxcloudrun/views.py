@@ -22,22 +22,22 @@ def count():
     # 获取请求体参数
     params = request.get_json()
 
-    print("aaaaaaaaaa111111")
-    print("params data: " + str(params))
+    # print("aaaaaaaaaa111111")
+    # print("params data: " + str(params))
 
-    try:
-        # 将数据转发到另一个服务器
-        response = requests.post('http://113.200.194.122:8988/post', json=params)
+    # try:
+    #     # 将数据转发到另一个服务器
+    #     response = requests.post('http://113.200.194.122:8988/post', json=params)
         
-        # 返回转发后的响应
-        return make_succ_response(response.json())
-    except requests.exceptions.RequestException as e:
-         return make_err_response('缺少action参数11' + str(params))
+    #     # 返回转发后的响应
+    #     return make_succ_response(response.json())
+    # except requests.exceptions.RequestException as e:
+    #      return make_err_response('缺少action参数11' + str(params))
 
 
     # 检查action参数
-    if 'action' not in params:
-        return make_err_response('缺少action参数22' + str(params))
+    # if 'action' not in params:
+    #     return make_err_response('缺少action参数22' + str(params))
 
     # 按照不同的action的值，进行不同的操作
     action = params['action']
