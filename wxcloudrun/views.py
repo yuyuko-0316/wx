@@ -25,7 +25,7 @@ def count():
 
     # 检查action参数
     if 'action' not in params:
-        return make_err_response('缺少action参数' + params)
+        return make_err_response('缺少action参数' + str(params))
 
     # 按照不同的action的值，进行不同的操作
     action = params['action']
@@ -54,7 +54,7 @@ def count():
 
     # action参数错误
     else:
-        return make_err_response('action参数错误' + params)
+        return make_err_response('action参数错误' + str(params))
 
 
 @app.route('/api/count', methods=['GET'])
