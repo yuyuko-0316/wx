@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, request
+from flask import render_template, request, requests
 from run import app
 from wxcloudrun.dao import delete_counterbyid, query_counterbyid, insert_counter, update_counterbyid
 from wxcloudrun.model import Counters
@@ -22,6 +22,7 @@ def count():
 
     # 获取请求体参数
     params = request.get_json()
+
 
     if not params:
        return make_err_response('No JSON data provided')
