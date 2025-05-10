@@ -19,7 +19,6 @@ def count():
     """
     :return:计数结果/清除结果
     """
-
     # 获取请求体参数
     params = request.get_json()
 
