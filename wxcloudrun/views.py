@@ -22,6 +22,7 @@ def count():
     # 获取请求体参数
     params = request.get_json()
 
+    print("aaaaaaaaaa111111")
     print("params data: " + str(params))
 
     try:
